@@ -1,0 +1,51 @@
+ve<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAbKqnHFmHPTHCXz1YBhwgaXf8JCbl7xko"></script>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline';  media-src *; script-src 'self' 'unsafe-inline' http://code.google.com" />-->
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/googlemap.js"></script>
+</head>
+<body onload="init()">
+
+    <div class="container-fluid navbar-inverse" >
+
+        <div class="navbar-header pull-left" >
+            <a href="#" class="navbar-brand" >
+                Restaurants
+            </a>
+        </div>
+
+        <div class="navbar-header pull-right" >
+            <select id="distancia" style="padding: 15px;" onchange="consultaRestaurant()">
+                <option selected>distancia</option>
+                <option value="200" >200m</option>
+                <option value="400" >400m</option>
+                <option value="800">800m</option>
+                <option value="1000">1000m</option>
+            </select>
+            <select id="type" style="padding: 15px;" onchange="consultaRestaurant()">
+                <option selected>Tipo</option>
+                <option value="italiano" >italiano</option>
+                <option value="americana" >Americano</option>
+                <option value="espanyola">Española</option>
+                <option value="anglesa">Inlgesa</option>
+                <option value="japonesa">Japonesa</option>
+                <option value="india">India</option>
+            </select>
+        </div>
+
+    </div>
+    <div id="fotos" >
+
+    </div>
+
+    <div id="map" style="height: 100%; width: 100%">
+    </div>
+</body>
+</html>
